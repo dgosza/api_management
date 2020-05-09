@@ -1,0 +1,7 @@
+.noSelected{
+  user-select: none;
+}
+
+.testeCor{
+  background-color: red;
+}
