@@ -13,7 +13,7 @@ import Github from './components/Github'
 
 function App() {
 
-    const [componentSelected, setComponentSelected] = useState('')
+    const [componentSelected, setComponentSelected] = useState(<Github/>)
 
     const githubRef = useRef()
     const openweatherRef = useRef()
