@@ -27,11 +27,10 @@ const OpenWeather = () => {
         setRenderDataComponent(<BoxWeather icon={iconWeather} description={descriptionWeather} temp={tempWeather} location={locationWeather} wind={windWeather} />)
     }, [iconWeather, descriptionWeather, tempWeather, locationWeather, windWeather])
 
-    const handleCityChoosed = async (e) => {
+    const handleCityChoosed = (e) => {
         const apiWeatherKey = '478828782f2af557333ec4cfba9dcb7a'
         const city = e.target.value
         const urlRequested = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiWeatherKey}`
-
         fetch(urlRequested)
             .then(response => response.json())
             .then(data => {
@@ -41,6 +40,9 @@ const OpenWeather = () => {
                 setLocationWeather(data.name)
                 setWindWeather(data.wind.speed)
 
+            })
+            .catch((err) => {
+                console.log('error: ' + err)
             })
         setShowWeatherData(true)
     }

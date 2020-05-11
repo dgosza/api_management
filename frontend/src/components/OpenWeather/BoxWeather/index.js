@@ -1,10 +1,9 @@
 import React from 'react';
 import './style.css'
 
-//weather icon path
-import iconpath from '../../../assets/images/weatherIcons/02d.png'
-
+//Icon Component
 import Icon from './Icon'
+
 //hoc
 import Aux from '../../hoc'
 
