@@ -10,23 +10,30 @@ import Grid from '@material-ui/core/Grid'
 //My Components
 import OpenWeather from './components/OpenWeather'
 import Github from './components/Github'
+import Twitter from './components/Twitter'
 
 function App() {
 
-    const [componentSelected, setComponentSelected] = useState(<Github/>)
+    const [componentSelected, setComponentSelected] = useState(<Twitter />)
 
     const githubRef = useRef()
     const openweatherRef = useRef()
+    const twitterRef = useRef()
 
     const handleClick = (ref) => {
 
         switch (ref.current.attributes.id.value) {
             case 'openweather':
-                setComponentSelected(<OpenWeather/>)
+                setComponentSelected(<OpenWeather />)
                 break;
             case 'github':
-                setComponentSelected(<Github/>)
+                setComponentSelected(<Github />)
                 break;
+            case 'twitter':
+                setComponentSelected(<Twitter />)
+                break;
+            default:
+                break
         }
 
     }
@@ -47,7 +54,7 @@ function App() {
                 </Grid>
 
                 <Grid item lg={3} align="center">
-                    <Button variant="outlined">--</Button>
+                    <Button variant="outlined" ref={twitterRef} id="twitter" onClick={() => { handleClick(twitterRef) }}>Twitter</Button>
                 </Grid>
 
                 <Grid item lg={3} align="center">

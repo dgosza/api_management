@@ -11,11 +11,19 @@ I created this little project to joke with some API's calls and deal with the da
     <img src="https://img.shields.io/badge/API-OpenWeather-informational">
 </p>
 
-<h2 align="right">Dependencies</h2>
+<h2 align="right">Frontend Dependencies</h2>
 <p align="right">
     <img src="https://img.shields.io/badge/4.9.13-Material UI-brightgreen">
     <img src="https://img.shields.io/badge/3.10.0-react icons-blue">
 </p>
+
+<h2 align="right">Backend Dependencies</h2>
+<p align="right">
+    <img src="https://img.shields.io/badge/2.2.11-twit-blue">
+    <img src="https://img.shields.io/badge/2.8.5-cors-blue">
+    <img src="https://img.shields.io/badge/4.17.1-express-blue">
+</p>
+
 
 <br>
 
