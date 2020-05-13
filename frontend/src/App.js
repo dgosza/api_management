@@ -11,14 +11,16 @@ import Grid from '@material-ui/core/Grid'
 import OpenWeather from './components/OpenWeather'
 import Github from './components/Github'
 import Twitter from './components/Twitter'
+import Spotify from './components/Spotify'
 
 function App() {
 
-    const [componentSelected, setComponentSelected] = useState(<Twitter />)
+    const [componentSelected, setComponentSelected] = useState(<Spotify />)
 
     const githubRef = useRef()
     const openweatherRef = useRef()
     const twitterRef = useRef()
+    const spotifyRef = useRef()
 
     const handleClick = (ref) => {
 
@@ -31,6 +33,9 @@ function App() {
                 break;
             case 'twitter':
                 setComponentSelected(<Twitter />)
+                break;
+            case 'spotify':
+                setComponentSelected(<Spotify />)
                 break;
             default:
                 break
@@ -58,7 +63,7 @@ function App() {
                 </Grid>
 
                 <Grid item lg={3} align="center">
-                    <Button variant="outlined">--</Button>
+                    <Button variant="outlined" ref={spotifyRef} id="spotify" onClick={() => { handleClick(spotifyRef) }}>Spotify</Button>
                 </Grid>
 
             </Grid>

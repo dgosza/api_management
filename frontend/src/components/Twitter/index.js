@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button'
 import { FaTwitter } from 'react-icons/fa'
 
 //API Backend
-import connectApi from '../../services/apiTwitter'
+import connectApi from '../../services/apiBackend'
 
 //Components of Trends
 import TopTrendsWorldwide from './Trends/TopTrendsWorldwide'
@@ -31,6 +31,9 @@ const Twitter = () => {
         connectApi.get('toptrendsWorld')
             .then(result => {
                 setToptrendsWorldWide(result.data[0].trends)
+            })
+            .catch(err => {
+                console.log('error: '+err)
             })
 
         connectApi.get('toptrendsSP')
