@@ -21,7 +21,8 @@ const Spotify = () => {
     const handleArtist = (artist) => {
         connectApi.get(`spotify/${artist}`)
             .then(result => {
-                setDataToBeRender(result.data.items)
+                const newData = result.data.items
+                setDataToBeRender(newData)
             })
             .catch(err => {
                 console.log('error: ' + err)

@@ -22,6 +22,7 @@ I created this little project to joke with some API's calls and deal with the da
     <img src="https://img.shields.io/badge/2.2.11-twit-blue">
     <img src="https://img.shields.io/badge/2.8.5-cors-blue">
     <img src="https://img.shields.io/badge/4.17.1-express-blue">
+    <img src="https://img.shields.io/badge/1.1.1-node spotify api-blue">
 </p>
 
 
