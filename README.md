@@ -8,7 +8,9 @@ I created this little project to joke with some API's calls and deal with the da
 <h2 align="right">Used API Calls</h2>
 <p align="right">
     <img src="https://img.shields.io/badge/API-Github-brightgreen">
-    <img src="https://img.shields.io/badge/API-OpenWeather-informational">
+    <img src="https://img.shields.io/badge/API-OpenWeather-orange">
+    <img src="https://img.shields.io/badge/API-Spotify-green">
+    <img src="https://img.shields.io/badge/API-Twitter-informational">
 </p>
 
 <h2 align="right">Frontend Dependencies</h2>
@@ -24,7 +26,6 @@ I created this little project to joke with some API's calls and deal with the da
     <img src="https://img.shields.io/badge/4.17.1-express-blue">
     <img src="https://img.shields.io/badge/1.1.1-node spotify api-blue">
 </p>
-
 
 <br>
 
