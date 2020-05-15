@@ -29,6 +29,17 @@ I created this little project to joke with some API's calls and deal with the da
 
 <br>
 
+
+I created this project with intuict to joke to some APIs calls nad study i little bit about them.
+
+Twitter API: receive top trends of some locations: Worldwide, São Paulo, Toronto and London. You can choose how much tweets you wanna see, ordened by 05, 10, 15, 20, 30, 40 and 50 tweets per column
+
+Weather API: Choose a location and see the data about that location choosed, like: weather speed, description and an icon relationed, the location itself and temperature.
+
+Github API: Type an username on Github and see some informations about the profile, bio description, number of repositories, link to the github profile and avatar.
+
+Spotify API: Choose an artist in a row and see their respective albums. 
+
 ## How to use
 
 ```bash
