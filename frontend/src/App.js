@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import './App.css';
 
 //Material UI
@@ -14,6 +14,8 @@ import Twitter from './components/Twitter'
 import Spotify from './components/Spotify'
 
 function App() {
+
+    const ColorContext = useContext('red')
 
     const [componentSelected, setComponentSelected] = useState(<Spotify />)
 
@@ -44,34 +46,37 @@ function App() {
     }
 
     return (
-        <Container className="teste">
-            <Typography variant="h6" align="center" className="noSelected">API Management</Typography>
-            <Typography variant="body2" align="center" className="noSelected">select below an api to acess and have fun!</Typography>
+        <ColorContext.Provider value="">
 
-            <Grid container className="listButtons">
+            <Container className="teste">
+                <Typography variant="h6" align="center" className="noSelected">API Management</Typography>
+                <Typography variant="body2" align="center" className="noSelected">select below an api to acess and have fun!</Typography>
 
-                <Grid item lg={3} align="center">
-                    <Button variant="outlined" ref={openweatherRef} id="openweather" onClick={() => { handleClick(openweatherRef) }}>Open Weather</Button>
+                <Grid container className="listButtons">
+
+                    <Grid item lg={3} align="center">
+                        <Button variant="outlined" ref={openweatherRef} id="openweather" onClick={() => { handleClick(openweatherRef) }}>Open Weather</Button>
+                    </Grid>
+
+                    <Grid item lg={3} align="center">
+                        <Button variant="outlined" ref={githubRef} id="github" onClick={() => { handleClick(githubRef) }}>Github</Button>
+                    </Grid>
+
+                    <Grid item lg={3} align="center">
+                        <Button variant="outlined" ref={twitterRef} id="twitter" onClick={() => { handleClick(twitterRef) }}>Twitter</Button>
+                    </Grid>
+
+                    <Grid item lg={3} align="center">
+                        <Button variant="outlined" ref={spotifyRef} id="spotify" onClick={() => { handleClick(spotifyRef) }}>Spotify</Button>
+                    </Grid>
+
                 </Grid>
+                <br className="noSelected" /><br className="noSelected" />
 
-                <Grid item lg={3} align="center">
-                    <Button variant="outlined" ref={githubRef} id="github" onClick={() => { handleClick(githubRef) }}>Github</Button>
-                </Grid>
+                {componentSelected}
 
-                <Grid item lg={3} align="center">
-                    <Button variant="outlined" ref={twitterRef} id="twitter" onClick={() => { handleClick(twitterRef) }}>Twitter</Button>
-                </Grid>
-
-                <Grid item lg={3} align="center">
-                    <Button variant="outlined" ref={spotifyRef} id="spotify" onClick={() => { handleClick(spotifyRef) }}>Spotify</Button>
-                </Grid>
-
-            </Grid>
-            <br className="noSelected" /><br className="noSelected" />
-
-            {componentSelected}
-
-        </Container>
+            </Container>
+        </ColorContext.Provider>
 
     );
 }
