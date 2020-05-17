@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './style.css'
 
+//HOC
 import Aux from '../../../hoc'
 
 //Material UI
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles';
+
+//Context
+import ColorContext from '../../../UseContext/ColorContext'
 
 const useStyles = makeStyles(() => ({
     button: {
@@ -16,6 +20,9 @@ const useStyles = makeStyles(() => ({
 const LineOfTweet = ({ nameTweet, urlTweet, tweet_volume }) => {
 
     const classes = useStyles();
+
+    const theme = useContext(ColorContext)
+    console.log(theme)
 
     return (
         <Aux>
